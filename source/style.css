@@ -70,7 +70,7 @@ body{
 }
 
 .painel::after{
-    content: url(./img/seta_preta.png);
+    content: url(./img/arroww.png);
     position: absolute;
     bottom: 20px;
     animation: vai-vem 0.7s infinite alternate ease-in-out
@@ -231,7 +231,7 @@ min-width: 160px;
     flex-direction: column;
     font-size: 20px;
     padding: 100px 0px;
-    background-color: lightgreen;
+    background-color: #38B6C4;
     grid-area: footer;
 }
 
