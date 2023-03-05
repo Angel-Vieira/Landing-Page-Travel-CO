@@ -1,0 +1,262 @@
+html{
+     font-family: 'Roboto', sans-serif;
+     font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 'header header header header'
+                          'painel painel painel painel'
+                          'about about about about'    
+                          ' services services services services'    
+                          'projects projects projects projects' 
+                          'footer footer footer footer'
+                          ;
+}
+
+
+.header{
+    grid-area: header;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.header-container h1{
+    font-size: 3rem;
+}
+
+.header-container nav ul{
+    display: flex;
+    font-size: 20px;
+}
+
+.header-container nav ul li a {
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: black;
+}
+
+.header-container nav ul li a:hover{
+    background-color: orangered;
+    color: aliceblue;
+    transition: 0.4s;
+}
+
+.header-container h1:hover{
+    color: orangered;
+
+}
+
+
+
+
+.painel{
+    background: url(./img/Santorini-Greece.jpg) center center no-repeat;
+    
+    height: 79vh;
+    background-size: cover;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    grid-area: painel;  
+}
+
+.painel::after{
+    content: url(./img/seta_preta.png);
+    position: absolute;
+    bottom: 20px;
+    animation: vai-vem 0.7s infinite alternate ease-in-out
+}
+
+
+.painel h2{
+    font-size: 4rem;
+    color: black;
+    
+}
+
+
+@media(max-width:450px){
+    .painel h2{
+        font-size: 2.5rem;
+    }
+}
+
+@-webkit-keyframes vai-vem{
+    0% { -webkit-transform: translateY(0);opacity:0.4;}
+    100% { -webkit-transform: translateY(10px);opacity:0.9;}
+}
+
+
+
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: aliceblue;
+    max-width: 192rem;
+    margin: 0 auto;
+    grid-area: about;
+}
+
+.about img{
+    width: 100%;
+    height: 100%;
+}
+
+.about .info{
+    padding: 90px;
+    font-size: 1.6rem;
+}
+
+.about .info p{
+    font-weight: 300;
+    margin: 30px 0px;
+}
+
+@media (max-width:900px){
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .about img{
+     flex-shrink: 1;
+    }
+}
+
+
+
+
+.services{
+    grid-area: services;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.services .serviço{
+    text-align: center;
+    padding: 70px 20px; 
+}
+
+.services h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 30px;
+}
+
+.services .serviço img{
+    max-width: 200px;
+    min-width: 150px;
+    margin-bottom: 20px; 
+}
+
+.services .serviço p{
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    min-width: 150px;
+    margin: 0 auto 0;
+    line-height: 25px;
+    text-align: center;
+}
+
+.services .serviço:nth-child(1){
+    background-color: lightskyblue;
+}
+
+.services .serviço:nth-child(2){
+    background-color: lightpink;
+}
+
+@media(max-width:500px){
+    .services{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.projects{
+    grid-area: projects;
+    background-color: bisque;
+}
+
+.container-projects{
+    display: flex;
+}
+
+.container-projects img{
+max-width: 100%;
+min-width: 160px;
+}
+
+@media(max-width:770px){
+    .container-projects{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-projects img{
+        max-width: 50%;
+        min-width: 150px;
+        flex: 1 1 auto;
+    }
+}
+
+@media(max-width:500px){
+    .container-projects img{
+        max-width: 100%;
+    }
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 100px 0px;
+    background-color: lightgreen;
+    grid-area: footer;
+}
+
+.footer nav ul li{
+    margin-inline: 20px;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.footer .social a{
+    font-size: 20px;
+    margin: 20px;
+}
+
+.footer ul li a:hover,
+.footer .social a i:hover{
+   color: aliceblue;
+   transition: 0.2s;
+}
+
+.footer h4{
+    font-size: 3rem;
+}
+
+
+
+
