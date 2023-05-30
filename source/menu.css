@@ -75,8 +75,8 @@ input{
     .header-container nav{
         position: absolute;
         top: 8px;
-        right: 20px;
-        z-index: 0; 
+        right: 0px;
+        z-index: 1; 
     }
 
     .header-container nav ul{
